@@ -1,0 +1,666 @@
+/* =========================================
+   PALETA DE COLORES NEÓN/DARK 
+   ========================================= */
+:root {
+    --bg: #0b0f19;
+    --card: #16242d;
+    --primary: #3b82f6;
+    --secondary: #06b6d4;
+    --text: #f1f5f9;
+    --gray: #94a3b8;
+    --accent-green: #06b6d4;
+}
+
+/* RESET GENERAL */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Inter', sans-serif; 
+    scroll-behavior: smooth;
+}
+
+body { 
+    background: var(--bg); 
+    color: var(--text); 
+    overflow-x: hidden; 
+}
+
+.container { 
+    max-width: 1100px; 
+    margin: auto; 
+    padding: 80px 20px; 
+
+}
+
+.container_proyecto{
+        max-width: 1100px; 
+    margin: auto; 
+    padding: 80px 20px; 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+  
+
+
+
+}
+
+/* =========================================
+   NAVBAR GLASSMORPHISM 
+   ========================================= */
+#navbar {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px 5%; 
+    background: rgba(11, 15, 25, 0.8);
+    backdrop-filter: blur(10px); 
+    position: sticky; 
+    top: 0; 
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo { 
+    font-weight: 800; 
+    font-size: 1.5rem; 
+    color: var(--primary); 
+    text-decoration: none;
+}
+
+.logo span { color: var(--secondary); }
+
+.logo-img {
+    width: 130px; 
+    height: 130px; 
+    object-fit: contain; 
+}
+
+.nav-links a { 
+    text-decoration: none; 
+    color: var(--text); 
+    margin-left: 25px; 
+    font-weight: 500; 
+    transition: 0.3s; 
+}
+
+.nav-links a:hover { color: var(--secondary); }
+
+.btn-contact-nav { 
+    background: var(--primary); 
+    padding: 8px 20px; 
+    border-radius: 50px; 
+    color: white !important;
+}
+
+/* =========================================
+   HERO SECTION (SEBASTIAN BELTRAN)
+   ========================================= */
+.hero-full-width {
+    width: 100%;
+    background: linear-gradient(rgba(11, 15, 25, 0.95), rgba(11, 15, 25, 0.95)), 
+                url('tu-fondo-si-tenes.jpg'); 
+    background-color: var(--bg);
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-content { 
+    display: flex; 
+    align-items: center; 
+    gap: 50px; 
+    min-height: 80vh; 
+}
+
+.hero-text { flex: 1.5; }
+
+/* Efecto Ultra-Llamativo para el nombre */
+.name-highlight {
+    font-size: 4.5rem !important;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    background: linear-gradient(135deg, #3b82f6, #06b6d4, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.3));
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: var(--gray);
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.hero-pitch {
+    font-size: 2.2rem;
+    margin-top: 35px;
+    color: white;
+    line-height: 1.2;
+}
+
+.hero-pitch span { 
+    color: var(--secondary); 
+    font-weight: 800; 
+}
+
+/* BOTÓN DE DESCARGA CV */
+.btn-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: transparent;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-cv i {
+    font-size: 1.2rem;
+}
+
+.btn-cv:hover {
+    background: var(--secondary);
+    color: var(--bg);
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+    transform: translateY(-3px);
+}
+
+
+
+
+
+/* IMAGEN Y FOTO BLOB */
+.hero-image { flex: 1; display: flex; justify-content: center; }
+
+.photo-blob {
+    width: 350px; 
+    height: 350px; 
+    background: var(--primary); 
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    overflow: hidden; 
+    animation: morph 6s ease-in-out infinite; 
+    border: 5px solid var(--secondary);
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.3);
+}
+
+.photo-blob img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+@keyframes morph {
+    0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    50% { border-radius: 50% 50% 30% 70% / 50% 60% 40% 50%; }
+    100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+}
+
+
+
+
+
+/* =========================================
+   TRAYECTORIA Y FORMACIÓN
+   ========================================= */
+.trayectoria-section {
+    background: linear-gradient(180deg, var(--bg) 0%, #161e2d 100%);
+    padding: 100px 0;
+    width: 100%;
+}
+
+
+/* Estilo para el texto de lógica sobre las cards */
+/* Esto hace que el bloque de texto ocupe toda la fila superior */
+.sobre-mi-destacado {
+    grid-column: 1 / -1; /* Se estira desde la primera hasta la última columna */
+    max-width: 950px;
+    margin: 0 auto 40px auto; 
+    text-align: center;
+    line-height: 1.8;
+    background: rgba(255, 255, 255, 0.03); 
+    padding: 40px;
+    border-radius: 20px;
+    border-left: 4px solid var(--primary);
+    border-right: 4px solid var(--primary);
+}
+
+/* Forzamos que las tarjetas se repartan en 3 columnas */
+.trayectoria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* Ajuste para celulares: que vuelvan a ser una sola columna */
+@media (max-width: 900px) {
+    .trayectoria-grid {
+        grid-template-columns: 1fr;
+    }
+    .sobre-mi-destacado {
+        grid-column: span 1;
+    }
+}
+
+.trayectoria-card {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.4s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.trayectoria-card:hover {
+    background: rgba(59, 130, 246, 0.05);
+    border-color: var(--primary);
+    transform: translateY(-10px);
+}
+
+.trayectoria-card i {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 25px;
+}
+
+.trayectoria-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.trayectoria-card p {
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+/* =========================================
+   VIDEO SECTION 
+   ========================================= */
+.video-section { 
+    background: linear-gradient(180deg, var(--bg) 0%, #161e2d 100%);
+
+    width: 100%;
+}
+
+.video-card {
+    max-width: 800px;
+    margin: 40px auto 0;
+    aspect-ratio: 16 / 9;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.video-card iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* =========================================
+   PROYECTOS GRID 
+   ========================================= */
+.section-title { 
+    font-size: 2.8rem; 
+    margin-bottom: 60px; 
+    text-align: center; 
+    font-weight: 800;
+}
+
+
+
+.projects-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px; 
+    
+}
+
+.project-card { 
+    background: var(--card); 
+    border-radius: 25px; 
+    overflow: hidden; 
+    transition: 0.4s; 
+    border: 1px solid rgba(255,255,255,0.05); 
+}
+
+.project-card:hover { 
+    transform: translateY(-10px); 
+    border-color: var(--secondary); 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.project-img { 
+    height: 250px; 
+    background: #1e293b; 
+}
+
+.project-img img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.project-info { padding: 30px; }
+
+.tags span { 
+    background: rgba(6, 182, 212, 0.1); 
+    color: var(--secondary); 
+    padding: 5px 12px; 
+    border-radius: 8px; 
+    font-size: 0.85rem; 
+    margin-right: 8px; 
+    font-weight: 600;
+}
+
+.github-link { 
+    display: inline-block; 
+    margin-top: 25px; 
+    color: var(--text); 
+    text-decoration: none; 
+    font-weight: 600; 
+    transition: 0.3s;
+}
+
+.github-link:hover { color: var(--primary); }
+
+/* =========================================
+   SKILLS & BACKEND ICON
+   ========================================= */
+.skills-section { 
+    background: #0f172a; 
+    padding: 80px 0; 
+}
+
+.skills-flex { 
+    display: flex; 
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    gap: 30px; 
+}
+
+.skill-item { 
+    text-align: center; 
+    transition: 0.3s; 
+}
+
+.skill-item i { 
+    display: block; 
+    font-size: 3.5rem; 
+    color: var(--secondary); 
+    margin-bottom: 15px; 
+}
+
+.backend-icon { color: var(--accent-green) !important; }
+
+.skill-item:hover { 
+    color: var(--primary); 
+    transform: scale(1.1); 
+}
+
+/* =========================================
+   CONTACT FORM 
+   ========================================= */
+/* CONTACTO */
+.contact-section { 
+    padding: 100px 0; 
+}
+
+.contact-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1.2fr; 
+    gap: 80px; 
+    background: linear-gradient(145deg, var(--card), #101a24);
+    padding: 60px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.section-title.left {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.contact-desc {
+    color: var(--gray);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.contact-desc span {
+    color: var(--secondary);
+    font-weight: 700;
+}
+
+/* Detalles de contacto con iconos */
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.detail-item i {
+    width: 50px;
+    height: 50px;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.detail-item span {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.detail-item p {
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* FORMULARIO MEJORADO */
+.contact-form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 25px; 
+}
+
+.contact-form input, 
+.contact-form textarea { 
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2); 
+    border: 2px solid rgba(255, 255, 255, 0.05); 
+    padding: 20px; 
+    color: white; 
+    border-radius: 15px; 
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(59, 130, 246, 0.05);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.1);
+}
+
+.contact-form textarea { height: 160px; }
+
+/* BOTÓN ENVIAR MENSAJE (Formulario) */
+.contact-form .btn-primary {
+    width: 100%; /* Para que ocupe todo el ancho del formulario */
+    background: var(--primary); /* El azul que ya definimos */
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    border: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px; /* Espacio entre el texto y el avioncito */
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px -10px rgba(59, 130, 246, 0.5); /* Sombra suave azul */
+}
+
+.contact-form .btn-primary i {
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.contact-form .btn-primary:hover {
+    transform: translateY(-3px); /* Se eleva un poquito */
+    background: #2563eb; /* Un azul un toque más claro al pasar el mouse */
+    box-shadow: 0 15px 30px -10px rgba(59, 130, 246, 0.6);
+    filter: brightness(1.1);
+}
+
+.contact-form .btn-primary:hover i {
+    transform: translateX(5px) translateY(-5px); /* El avioncito hace efecto de despegue */
+}
+
+/* Ajuste para que el grupo del botón no tenga bordes raros */
+.form-group:last-child {
+    margin-top: 10px;
+}
+
+/* FOOTER */
+footer { 
+    text-align: center; 
+    padding: 80px 20px; 
+
+
+
+    background: linear-gradient(180deg, var(--bg) 0%, #161e2d 100%);
+    padding: 100px 0;
+    width: 100%;
+    
+}
+
+.footer-copy {
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.footer-copy strong {
+    color: var(--primary);
+}
+
+/* =========================================
+   SOCIAL LINKS - DINAMISMO Y NEÓN
+   ========================================= */
+.social-links {
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaciado equilibrado entre logos */
+}
+
+.social-links a {
+    color: var(--text);
+    font-size: 2.2rem; /* Un poco más grandes para que resalten */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efecto de rebote suave */
+    opacity: 0.5;
+    display: inline-block;
+}
+
+/* Efecto al pasar el mouse (Hover) */
+.social-links a:hover {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.1); /* Se eleva y crece un poquito */
+}
+
+/* Colores específicos con brillo de neón */
+.social-links a[aria-label="LinkedIn"]:hover {
+    color: #0077b5;
+    text-shadow: 0 0 20px rgba(0, 119, 181, 0.6);
+}
+
+.social-links a[aria-label="GitHub"]:hover {
+    color: #f0f6fc;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.social-links a[aria-label="Instagram"]:hover {
+    color: #e4405f;
+    text-shadow: 0 0 20px rgba(228, 64, 95, 0.6);
+}
+
+/* Ajuste de la línea final */
+.footer-tagline {
+    margin-top: 10px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* Ajuste Mobile */
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+        gap: 50px;
+    }
+    .section-title.left { text-align: center; }
+    .contact-desc { text-align: center; }
+    .contact-details { align-items: center; }
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+@media (max-width: 900px) {
+    .hero-content { 
+        flex-direction: column-reverse; 
+        text-align: center; 
+        padding-top: 40px;
+    }
+    
+    .name-highlight { font-size: 3rem !important; }
+    
+    .hero-description { margin: auto; }
+    
+    .projects-grid, .contact-grid { 
+        grid-template-columns: 1fr; 
+    }
+    
+    .photo-blob { 
+        width: 250px; 
+        height: 250px; 
+    }
+
+    .trayectoria-grid {
+        grid-template-columns: 1fr;
+    }
+}
